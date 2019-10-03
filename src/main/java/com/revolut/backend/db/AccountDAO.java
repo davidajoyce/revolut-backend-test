@@ -25,4 +25,8 @@ public class AccountDAO extends AbstractDAO<Account> {
     public List<Account> findAll() {
         return list((Query<Account>) namedQuery("com.example.helloworld.core.Account.findAll"));
     }
+
+    public void removeAccount(Account account) {
+        currentSession().delete(account);
+    }
 }

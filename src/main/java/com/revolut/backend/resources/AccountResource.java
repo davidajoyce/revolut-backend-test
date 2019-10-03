@@ -6,6 +6,7 @@ import io.dropwizard.hibernate.UnitOfWork;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/account")
@@ -30,4 +31,29 @@ public class AccountResource {
         return accountDAO.findAll();
     }
 
+    @GET
+    @Path("/{accountId}")
+    @UnitOfWork
+    public Account getAccount(@PathParam("accountId") Long accountId) {
+        return findSafely(accountId);
+    }
+
+    @DELETE
+    @Path("/{accountId}")
+    @UnitOfWork
+    public Response removeAccountById(@PathParam("accountId") Long accountId){
+        Account account = findSafely(accountId);
+        if(account != null) {
+            accountDAO.removeAccount(account);
+            return Response.ok().build();
+        }
+        else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+
+    }
+
+    private Account findSafely(long accountId) {
+        return accountDAO.findById(accountId).orElseThrow(() -> new NotFoundException("No such account."));
+    }
 }
