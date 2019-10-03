@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(DropwizardExtensionsSupport.class)
-public class IntegrationTest {
+public class AccountResourceTest {
 
     private static final String TMP_FILE = createTempFile();
     private static final String CONFIG_PATH = ResourceHelpers.resourceFilePath("test-example.yml");
