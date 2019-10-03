@@ -15,8 +15,8 @@ public class AccountResourceTest extends BaseResourceTest{
 
     @Test
     public void testPostAccount() throws Exception {
-        final Account account = new Account("Dr. IntegrationTest", BigDecimal.valueOf(1000));
-        final Account newAccount = postAccount(account);
+        Account account = new Account("Dr. IntegrationTest", BigDecimal.valueOf(1000));
+        Account newAccount = postAccount(account);
         assertThat(newAccount.getId()).isNotNull();
         assertThat(newAccount.getName()).isEqualTo(account.getName());
         assertThat(newAccount.getBalance()).isEqualTo(account.getBalance());
@@ -25,25 +25,25 @@ public class AccountResourceTest extends BaseResourceTest{
 
     @Test
     public void testGetAccounts() throws Exception{
-        final Account account = new Account("Mr.Test", BigDecimal.valueOf(1000));
-        postAccount(account);
+        Account account = new Account("Mr.Test", BigDecimal.valueOf(1000));
+        Account newAccount = postAccount(account);
         Response response = getAccounts();
         assertThat(response.getStatus()).isEqualTo(HttpStatus.OK_200);
         List<Account> accounts = response.readEntity(new GenericType<List<Account>>() {});
         assertThat(accounts.size()).isEqualTo(1);
         assertThat(accounts.get(0).getName()).isEqualTo(account.getName());
         assertThat(accounts.get(0).getBalance()).isEqualTo(account.getBalance());
-        deleteAccount(account);
+        deleteAccount(newAccount);
     }
 
     @Test
     public void testGetAccountSingle() throws Exception {
-        final Account account = new Account("Mr.Test", BigDecimal.valueOf(1000));
-        final Account newAccount = postAccount(account);
+        Account account = new Account("Mr.Test", BigDecimal.valueOf(1000));
+        Account newAccount =  postAccount(account);
         Account testAccount = getAccountById(newAccount);
         assertThat(testAccount.getId()).isNotNull();
         assertThat(testAccount.getName()).isEqualTo(newAccount.getName());
         assertThat(testAccount.getBalance()).isEqualTo(newAccount.getBalance());
-        deleteAccount(account);
+        deleteAccount(newAccount);
     }
 }

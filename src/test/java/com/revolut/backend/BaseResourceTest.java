@@ -1,6 +1,7 @@
 package com.revolut.backend;
 
 import com.revolut.backend.core.Account;
+import com.revolut.backend.core.MoneyTransfer;
 import io.dropwizard.testing.ConfigOverride;
 import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit5.DropwizardAppExtension;
@@ -14,6 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -64,4 +66,11 @@ public class BaseResourceTest {
         final String url = "http://localhost:" + RULE.getLocalPort() + "/account/" + newAccount.getId();
         Response response = RULE.client().target(url).request().delete();
     }
+
+    public MoneyTransfer postTransaction(Long fromAccountId, Long toAccountId, BigDecimal value){
+        MoneyTransfer moneyTransfer = new MoneyTransfer();
+
+        return moneyTransfer;
+    }
+
 }
