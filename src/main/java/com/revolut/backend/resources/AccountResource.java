@@ -27,7 +27,7 @@ public class AccountResource {
 
     @GET
     @UnitOfWork
-    public List<Account> listPeople() {
+    public List<Account> listAccounts() {
         return accountDAO.findAll();
     }
 

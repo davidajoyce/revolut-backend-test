@@ -2,7 +2,9 @@ package com.revolut.backend;
 
 import com.revolut.backend.core.Account;
 import com.revolut.backend.db.AccountDAO;
+import com.revolut.backend.db.MoneyTransferDAO;
 import com.revolut.backend.resources.AccountResource;
+import com.revolut.backend.resources.TransactionResource;
 import io.dropwizard.Application;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
 import io.dropwizard.configuration.SubstitutingSourceProvider;
@@ -27,7 +29,7 @@ public class MoneyTransferApplication extends Application<MoneyTransferConfigura
 
     @Override
     public String getName() {
-        return "hello-world";
+        return "revolut-backend-test";
     }
 
     @Override
@@ -52,7 +54,9 @@ public class MoneyTransferApplication extends Application<MoneyTransferConfigura
     @Override
     public void run(MoneyTransferConfiguration configuration, Environment environment) {
         final AccountDAO accountdao = new AccountDAO(hibernateBundle.getSessionFactory());
+        final MoneyTransferDAO moneyTransferdao = new MoneyTransferDAO(hibernateBundle.getSessionFactory());
         environment.jersey().register(new AccountResource(accountdao));
+        environment.jersey().register(new TransactionResource(moneyTransferdao));
     }
 }
 

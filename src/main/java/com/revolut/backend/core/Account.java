@@ -16,7 +16,7 @@ import java.util.Objects;
 @NamedQueries(
         {
                 @NamedQuery(
-                        name = "com.example.helloworld.core.Account.findAll",
+                        name = "com.example.revolut.core.Account.findAll",
                         query = "SELECT a FROM Account a"
                 )
         })

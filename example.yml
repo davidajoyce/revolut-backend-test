@@ -66,23 +66,5 @@ logging:
 # Logback's Size and Time Based Rolling Policy -  archivedLogFilenamePattern: /tmp/application-%d{yyyy-MM-dd}-%i.log.gz
 # Logback's Fixed Window Rolling Policy -  archivedLogFilenamePattern: /tmp/application-%i.log.gz
 
-  appenders:
-    - type: console
-    - type: file
-      threshold: INFO
-      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
-      currentLogFilename: /tmp/application.log
-      archivedLogFilenamePattern: /tmp/application-%d{yyyy-MM-dd}-%i.log.gz
-      archivedFileCount: 7
-      timeZone: UTC
-      maxFileSize: 10MiB
 
-# the key needs to match the configuration key of the renderer (ViewRenderer::getConfigurationKey)
 
-metrics:
-  reporters:
-    - type: graphite
-      host: localhost
-      port: 2003
-      prefix: example
-      frequency: 1m

@@ -23,7 +23,7 @@ public class AccountDAO extends AbstractDAO<Account> {
 
     @SuppressWarnings("unchecked")
     public List<Account> findAll() {
-        return list((Query<Account>) namedQuery("com.example.helloworld.core.Account.findAll"));
+        return list((Query<Account>) namedQuery("com.example.revolut.core.Account.findAll"));
     }
 
     public void removeAccount(Account account) {

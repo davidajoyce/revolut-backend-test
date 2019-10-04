@@ -2,7 +2,7 @@ package com.revolut.backend;
 
 import com.revolut.backend.core.Account;
 import com.revolut.backend.core.MoneyTransfer;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 
@@ -17,11 +17,12 @@ public class TransactionResourceTest extends BaseResourceTest{
         Account account2 = new Account("Test Account 1", BigDecimal.valueOf(10000));
         Account newAccount2 =  postAccount(account2);
 
-        MoneyTransfer moneyTransfer = postTransaction(account1.getId(), account2.getId(), BigDecimal.valueOf(5000));
+        //String response = postTransactionString(newAccount1.getId(), newAccount2.getId(), BigDecimal.valueOf(5000));
+        MoneyTransfer moneyTransfer = postTransaction(newAccount1.getId(), newAccount2.getId(), BigDecimal.valueOf(5000));
 
-        assertEquals(account1.getId(), moneyTransfer.getFromAccount());
-        assertEquals(account2.getId(), moneyTransfer.getToAccount());
-        assertEquals(BigDecimal.valueOf(5000), moneyTransfer.getAmount());
+        assertEquals(account1.getId(), moneyTransfer.getAccountFromId());
+        assertEquals(account2.getId(), moneyTransfer.getAccountToId());
+        assertEquals(BigDecimal.valueOf(5000), moneyTransfer.getValue());
 
         Account getAccount1 = getAccountById(account1);
         Account getAccount2 = getAccountById(account2);

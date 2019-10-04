@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet id="2" author="davidj">
+    <changeSet id="1" author="davidj">
     <createTable tableName="account">
         <column name="id" type="bigint" autoIncrement="true">
             <constraints primaryKey="true" nullable="false"/>
@@ -16,5 +16,19 @@
         </column>
         <column name="balance" type="decimal"/>
     </createTable>
+    </changeSet>
+    <changeSet id="2" author="davidj">
+        <createTable tableName="moneyTransfer">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="accountFromId" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="accountToId" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="value" type="decimal"/>
+        </createTable>
     </changeSet>
 </databaseChangeLog>
