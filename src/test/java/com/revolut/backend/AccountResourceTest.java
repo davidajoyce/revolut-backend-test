@@ -15,7 +15,7 @@ public class AccountResourceTest extends BaseResourceTest{
 
     @Test
     public void testPostAccount() throws Exception {
-        Account account = new Account("Dr. IntegrationTest", BigDecimal.valueOf(1000));
+        Account account = new Account("Mr.Test", BigDecimal.valueOf(1000));
         Account newAccount = postAccount(account);
         assertThat(newAccount.getId()).isNotNull();
         assertThat(newAccount.getName()).isEqualTo(account.getName());
