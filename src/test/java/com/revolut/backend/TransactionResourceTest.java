@@ -17,18 +17,16 @@ public class TransactionResourceTest extends BaseResourceTest{
         Account account2 = new Account("Test Account 1", BigDecimal.valueOf(10000));
         Account newAccount2 =  postAccount(account2);
 
-        //String response = postTransactionString(newAccount1.getId(), newAccount2.getId(), BigDecimal.valueOf(5000));
         MoneyTransfer moneyTransfer = postTransaction(newAccount1.getId(), newAccount2.getId(), BigDecimal.valueOf(5000));
 
-        assertEquals(account1.getId(), moneyTransfer.getAccountFromId());
-        assertEquals(account2.getId(), moneyTransfer.getAccountToId());
+        assertEquals(newAccount1.getId(), moneyTransfer.getAccountFrom());
+        assertEquals(newAccount2.getId(), moneyTransfer.getAccountTo());
         assertEquals(BigDecimal.valueOf(5000), moneyTransfer.getValue());
 
-        Account getAccount1 = getAccountById(account1);
-        Account getAccount2 = getAccountById(account2);
+        Account accountAfterTransfer1 = getAccountById(newAccount1);
+        Account accountAfterTransfer2 = getAccountById(newAccount2);
 
-        assertEquals(BigDecimal.valueOf(5000), getAccount1.getBalance());
-        assertEquals(BigDecimal.valueOf(15000), getAccount2.getBalance());
+        assertEquals(BigDecimal.valueOf(5000), accountAfterTransfer1.getBalance());
+        assertEquals(BigDecimal.valueOf(15000), accountAfterTransfer2.getBalance());
     }
-
 }

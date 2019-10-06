@@ -24,7 +24,7 @@ public class MoneyTransferDAO extends AbstractDAO<MoneyTransfer> {
 
     @SuppressWarnings("unchecked")
     public List<MoneyTransfer> findAll() {
-        return list((Query<MoneyTransfer>) namedQuery("com.example.helloworld.core.MoneyTransfer.findAll"));
+        return list((Query<MoneyTransfer>) namedQuery("com.example.revolut.core.MoneyTransfer.findAll"));
     }
 
     public void removeAccount(MoneyTransfer moneyTransfer) {

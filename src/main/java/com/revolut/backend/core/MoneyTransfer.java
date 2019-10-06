@@ -1,7 +1,5 @@
 package com.revolut.backend.core;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,12 +12,12 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
-@Table(name = "moneyTransfer")
+@Table(name = "moneytransfer")
 @NamedQueries(
         {
                 @NamedQuery(
                         name = "com.example.revolut.core.MoneyTransfer.findAll",
-                        query = "SELECT t FROM Transaction t"
+                        query = "SELECT m FROM MoneyTransfer m"
                 )
         })
 public class MoneyTransfer {
@@ -27,11 +25,11 @@ public class MoneyTransfer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "accountFromId", nullable = false)
-    private long accountFromId;
+    @Column(name = "accountfrom", nullable = false)
+    private long accountfrom;
 
-    @Column(name = "accountToId", nullable = false)
-    private long accountToId;
+    @Column(name = "accountto", nullable = false)
+    private long accountto;
 
     @Column(name = "value", nullable = false)
     private BigDecimal value;
@@ -39,9 +37,9 @@ public class MoneyTransfer {
     public MoneyTransfer() {
     }
 
-    public MoneyTransfer(long accountFromId, long accountToId, BigDecimal value) {
-        this.accountFromId = accountFromId;
-        this.accountToId = accountToId;
+    public MoneyTransfer(long accountfrom, long accountto, BigDecimal value) {
+        this.accountfrom = accountfrom;
+        this.accountto = accountto;
         this.value = value;
     }
 
@@ -53,20 +51,20 @@ public class MoneyTransfer {
         this.id = id;
     }
 
-    public long getAccountFromId() {
-        return accountFromId;
+    public long getAccountFrom() {
+        return accountfrom;
     }
 
-    public void setAccountFromId(long accountFromId) {
-        this.accountFromId = accountFromId;
+    public void setAccountFrom(long accountfrom) {
+        this.accountfrom = accountfrom;
     }
 
-    public long getAccountToId() {
-        return accountToId;
+    public long getAccountTo() {
+        return accountto;
     }
 
-    public void setAccountToId(long accountToId) {
-        this.accountToId = accountToId;
+    public void setAccountTo(long accountto) {
+        this.accountto = accountto;
     }
 
     public BigDecimal getValue() {
@@ -89,13 +87,13 @@ public class MoneyTransfer {
         final MoneyTransfer that = (MoneyTransfer) o;
 
         return Objects.equals(this.id, that.id) &&
-                Objects.equals(this.accountFromId, that.accountFromId) &&
-                Objects.equals(this.accountToId, that.accountToId) &&
+                Objects.equals(this.accountfrom, that.accountfrom) &&
+                Objects.equals(this.accountto, that.accountto) &&
                 Objects.equals(this.value, that.value);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, accountFromId, accountToId, value);
+        return Objects.hash(id, accountfrom, accountto, value);
     }
 }

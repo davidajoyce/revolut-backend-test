@@ -1,6 +1,7 @@
 package com.revolut.backend;
 
 import com.revolut.backend.core.Account;
+import com.revolut.backend.core.MoneyTransfer;
 import com.revolut.backend.db.AccountDAO;
 import com.revolut.backend.db.MoneyTransferDAO;
 import com.revolut.backend.resources.AccountResource;
@@ -20,7 +21,7 @@ public class MoneyTransferApplication extends Application<MoneyTransferConfigura
     }
 
     private final HibernateBundle<MoneyTransferConfiguration> hibernateBundle =
-            new HibernateBundle<MoneyTransferConfiguration>(Account.class) {
+            new HibernateBundle<MoneyTransferConfiguration>(Account.class,MoneyTransfer.class) {
                 @Override
                 public DataSourceFactory getDataSourceFactory(MoneyTransferConfiguration configuration) {
                     return configuration.getDataSourceFactory();

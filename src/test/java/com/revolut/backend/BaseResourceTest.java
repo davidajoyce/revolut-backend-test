@@ -67,7 +67,7 @@ public class BaseResourceTest {
         Response response = RULE.client().target(url).request().delete();
     }
 
-    public MoneyTransfer postTransaction(Long fromAccountId, Long toAccountId, BigDecimal value){
+    public MoneyTransfer postTransaction(long fromAccountId, long toAccountId, BigDecimal value){
         MoneyTransfer moneyTransfer = new MoneyTransfer(fromAccountId, toAccountId, value);
 
         return RULE.client().target("http://localhost:" + RULE.getLocalPort() + "/transaction")
