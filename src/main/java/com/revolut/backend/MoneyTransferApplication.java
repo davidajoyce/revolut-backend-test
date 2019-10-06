@@ -4,6 +4,7 @@ import com.revolut.backend.core.Account;
 import com.revolut.backend.core.MoneyTransfer;
 import com.revolut.backend.db.AccountDAO;
 import com.revolut.backend.db.MoneyTransferDAO;
+import com.revolut.backend.exception.ValidationExceptionMapper;
 import com.revolut.backend.resources.AccountResource;
 import com.revolut.backend.resources.TransactionResource;
 import io.dropwizard.Application;
@@ -58,6 +59,7 @@ public class MoneyTransferApplication extends Application<MoneyTransferConfigura
         final MoneyTransferDAO moneyTransferdao = new MoneyTransferDAO(hibernateBundle.getSessionFactory());
         environment.jersey().register(new AccountResource(accountdao));
         environment.jersey().register(new TransactionResource(moneyTransferdao, accountdao));
+        environment.jersey().register(new ValidationExceptionMapper());
     }
 }
 

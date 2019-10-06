@@ -76,12 +76,11 @@ public class BaseResourceTest {
                 .readEntity(MoneyTransfer.class);
     }
 
-    public String postTransactionString(Long fromAccountId, Long toAccountId, BigDecimal value){
+    public Response postTransactionResponse(Long fromAccountId, Long toAccountId, BigDecimal value){
         MoneyTransfer moneyTransfer = new MoneyTransfer(fromAccountId, toAccountId, value);
 
         return RULE.client().target("http://localhost:" + RULE.getLocalPort() + "/transaction")
                 .request()
-                .post(Entity.entity(moneyTransfer, MediaType.APPLICATION_JSON_TYPE))
-                .readEntity(String.class);
+                .post(Entity.entity(moneyTransfer, MediaType.APPLICATION_JSON_TYPE));
     }
 }

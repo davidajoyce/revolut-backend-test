@@ -2,6 +2,7 @@ package com.revolut.backend.exception;
 
 public class ValidationException extends Throwable {
     private int code;
+    private String message;
     public ValidationException() {
         this(500);
     }
@@ -14,8 +15,12 @@ public class ValidationException extends Throwable {
     public ValidationException(int code, String message, Throwable throwable) {
         super(message, throwable);
         this.code = code;
+        this.message = message;
     }
     public int getCode() {
         return code;
     }
+
+    public String getMessage(){ return message; };
+
 }

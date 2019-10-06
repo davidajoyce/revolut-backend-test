@@ -1,35 +1,35 @@
-INFO  [2019-10-06 18:13:13,244] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@7fb9a83c{/,null,AVAILABLE}
-INFO  [2019-10-06 18:13:13,262] io.dropwizard.setup.AdminEnvironment: tasks = 
+INFO  [2019-10-06 20:14:58,740] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@25dc2c0{/,null,AVAILABLE}
+INFO  [2019-10-06 20:14:58,750] io.dropwizard.setup.AdminEnvironment: tasks = 
 
     POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
     POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
 
-INFO  [2019-10-06 18:13:13,278] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@2f64f99f{/,null,AVAILABLE}
-INFO  [2019-10-06 18:13:13,316] org.eclipse.jetty.server.AbstractConnector: Started application@5c703860{HTTP/1.1,[http/1.1]}{0.0.0.0:64700}
-INFO  [2019-10-06 18:13:13,327] org.eclipse.jetty.server.AbstractConnector: Started admin@6315bb4{HTTP/1.1,[http/1.1]}{0.0.0.0:64701}
-INFO  [2019-10-06 18:13:13,327] org.eclipse.jetty.server.Server: Started @9341ms
-INFO  [2019-10-06 18:13:15,183] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 18:13:15,207] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
-INFO  [2019-10-06 18:13:15,218] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 18:13:15,225] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 18:13:15,228] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
-INFO  [2019-10-06 18:13:15,235] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
-INFO  [2019-10-06 18:13:15,252] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
-INFO  [2019-10-06 18:13:16,639] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 18:13:16,641] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-INFO  [2019-10-06 18:13:16,642] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 18:13:16,643] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 18:13:16,643] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-INFO  [2019-10-06 18:13:16,644] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 18:13:16,668] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.account (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, balance DECIMAL, CONSTRAINT PK_ACCOUNT PRIMARY KEY (id))
-INFO  [2019-10-06 18:13:16,684] liquibase.changelog.ChangeSet: Table account created
-INFO  [2019-10-06 18:13:16,685] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.moneytransfer (id BIGINT AUTO_INCREMENT NOT NULL, accountfrom BIGINT NOT NULL, accountto BIGINT NOT NULL, value DECIMAL, CONSTRAINT PK_MONEYTRANSFER PRIMARY KEY (id))
-INFO  [2019-10-06 18:13:16,686] liquibase.changelog.ChangeSet: Table moneytransfer created
-INFO  [2019-10-06 18:13:16,686] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::davidj ran successfully in 18ms
-INFO  [2019-10-06 18:13:16,687] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 18:13:16,699] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'davidj', 'migrations.xml', NOW(), 1, '8:ce264b3a01f7ec7967a49eea321fcad5', 'createTable tableName=account; createTable tableName=moneytransfer', '', 'EXECUTED', NULL, NULL, '3.6.1', '0385596644')
-INFO  [2019-10-06 18:13:16,704] liquibase.lockservice.StandardLockService: Successfully released change log lock
-WARN  [2019-10-06 18:13:17,288] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: HK2 service reification failed for [org.glassfish.jersey.message.internal.DataSourceProvider] with an exception:
+INFO  [2019-10-06 20:14:58,763] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@10bcbbce{/,null,AVAILABLE}
+INFO  [2019-10-06 20:14:58,793] org.eclipse.jetty.server.AbstractConnector: Started application@1a8e44fe{HTTP/1.1,[http/1.1]}{0.0.0.0:52629}
+INFO  [2019-10-06 20:14:58,797] org.eclipse.jetty.server.AbstractConnector: Started admin@287317df{HTTP/1.1,[http/1.1]}{0.0.0.0:52630}
+INFO  [2019-10-06 20:14:58,798] org.eclipse.jetty.server.Server: Started @9069ms
+INFO  [2019-10-06 20:14:59,860] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:14:59,874] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2019-10-06 20:14:59,886] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:14:59,890] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:14:59,892] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2019-10-06 20:14:59,895] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2019-10-06 20:14:59,902] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2019-10-06 20:15:01,706] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:01,711] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2019-10-06 20:15:01,714] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:01,715] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:01,717] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2019-10-06 20:15:01,719] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:15:01,775] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.account (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, balance DECIMAL, CONSTRAINT PK_ACCOUNT PRIMARY KEY (id))
+INFO  [2019-10-06 20:15:01,791] liquibase.changelog.ChangeSet: Table account created
+INFO  [2019-10-06 20:15:01,792] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.moneytransfer (id BIGINT AUTO_INCREMENT NOT NULL, accountfrom BIGINT NOT NULL, accountto BIGINT NOT NULL, value DECIMAL, CONSTRAINT PK_MONEYTRANSFER PRIMARY KEY (id))
+INFO  [2019-10-06 20:15:01,795] liquibase.changelog.ChangeSet: Table moneytransfer created
+INFO  [2019-10-06 20:15:01,796] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::davidj ran successfully in 23ms
+INFO  [2019-10-06 20:15:01,799] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:01,815] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'davidj', 'migrations.xml', NOW(), 1, '8:ce264b3a01f7ec7967a49eea321fcad5', 'createTable tableName=account; createTable tableName=moneytransfer', '', 'EXECUTED', NULL, NULL, '3.6.1', '0392901719')
+INFO  [2019-10-06 20:15:01,823] liquibase.lockservice.StandardLockService: Successfully released change log lock
+WARN  [2019-10-06 20:15:02,730] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: HK2 service reification failed for [org.glassfish.jersey.message.internal.DataSourceProvider] with an exception:
 MultiException stack 1 of 2
 java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
@@ -93,7 +93,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -172,13 +172,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -227,7 +227,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -356,7 +356,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -435,13 +435,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -490,7 +490,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -619,7 +619,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -698,13 +698,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -753,7 +753,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -882,7 +882,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -961,13 +961,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -1016,7 +1016,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1145,7 +1145,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1224,13 +1224,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -1279,7 +1279,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1408,7 +1408,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1487,13 +1487,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -1542,7 +1542,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1671,7 +1671,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1750,13 +1750,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -1805,7 +1805,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1934,7 +1934,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2013,13 +2013,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@49afaf65
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@533ed36e
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=1834186423
+	identityHashCode=995331626
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -2068,7 +2068,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.AccountResourceTest.testPostAccount(AccountResourceTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2134,126 +2134,128 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
 
 
-INFO  [2019-10-06 18:13:17,327] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    94600 nanoseconds spent acquiring 2 JDBC connections;
-    57200 nanoseconds spent releasing 2 JDBC connections;
-    16428600 nanoseconds spent preparing 1 JDBC statements;
-    1714900 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:02,735] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    158700 nanoseconds spent acquiring 2 JDBC connections;
+    84200 nanoseconds spent releasing 2 JDBC connections;
+    24563300 nanoseconds spent preparing 1 JDBC statements;
+    2372800 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    5208700 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    26745800 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 18:13:17,348] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    81700 nanoseconds spent acquiring 2 JDBC connections;
-    45100 nanoseconds spent releasing 2 JDBC connections;
-    59500 nanoseconds spent preparing 1 JDBC statements;
-    233800 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:02,989] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    117200 nanoseconds spent acquiring 2 JDBC connections;
+    88400 nanoseconds spent releasing 2 JDBC connections;
+    866600 nanoseconds spent preparing 2 JDBC statements;
+    714300 nanoseconds spent executing 2 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    106200 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    13685700 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 18:13:17,368] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    84300 nanoseconds spent acquiring 2 JDBC connections;
-    38300 nanoseconds spent releasing 2 JDBC connections;
-    202500 nanoseconds spent preparing 1 JDBC statements;
-    548900 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:03,022] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    141800 nanoseconds spent acquiring 2 JDBC connections;
+    68300 nanoseconds spent releasing 2 JDBC connections;
+    107900 nanoseconds spent preparing 1 JDBC statements;
+    886100 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    168100 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    195700 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 18:13:17,392] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    94600 nanoseconds spent acquiring 2 JDBC connections;
-    47600 nanoseconds spent releasing 2 JDBC connections;
-    412200 nanoseconds spent preparing 1 JDBC statements;
-    192600 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:03,072] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    137700 nanoseconds spent acquiring 2 JDBC connections;
+    98000 nanoseconds spent releasing 2 JDBC connections;
+    498500 nanoseconds spent preparing 1 JDBC statements;
+    218900 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    89700 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
-    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+    144300 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    91900 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 18:13:17,453] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    587800 nanoseconds spent acquiring 2 JDBC connections;
-    38100 nanoseconds spent releasing 2 JDBC connections;
-    1100900 nanoseconds spent preparing 1 JDBC statements;
-    203300 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:03,088] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    594500 nanoseconds spent acquiring 2 JDBC connections;
+    86300 nanoseconds spent releasing 2 JDBC connections;
+    161300 nanoseconds spent preparing 2 JDBC statements;
+    729900 nanoseconds spent executing 2 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    104200 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    874100 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 18:13:17,480] org.eclipse.jetty.server.AbstractConnector: Stopped application@5c703860{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
-INFO  [2019-10-06 18:13:17,483] org.eclipse.jetty.server.AbstractConnector: Stopped admin@6315bb4{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
-INFO  [2019-10-06 18:13:17,485] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@2f64f99f{/,null,UNAVAILABLE}
-INFO  [2019-10-06 18:13:17,491] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@7fb9a83c{/,null,UNAVAILABLE}
-INFO  [2019-10-06 19:20:13,870] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
-INFO  [2019-10-06 19:20:13,876] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
-INFO  [2019-10-06 19:20:14,185] org.hibernate.Version: HHH000412: Hibernate Core {5.2.15.Final}
-INFO  [2019-10-06 19:20:14,189] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
-INFO  [2019-10-06 19:20:14,215] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.revolut.backend.core.Account, com.revolut.backend.core.MoneyTransfer]
-INFO  [2019-10-06 19:20:14,355] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  [2019-10-06 19:20:14,920] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-INFO  [2019-10-06 19:20:15,456] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@185a0811
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@77fb1002
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@e2f6a45
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@24cbf894
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@6c19769c
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@434d001d
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@36453773
-INFO  [2019-10-06 19:20:15,457] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@4db16677
-INFO  [2019-10-06 19:20:15,458] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@6abb44cb
-INFO  [2019-10-06 19:20:21,209] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
-INFO  [2019-10-06 19:20:36,131] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
-INFO  [2019-10-06 19:20:36,140] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
-INFO  [2019-10-06 19:20:36,564] org.hibernate.Version: HHH000412: Hibernate Core {5.2.15.Final}
-INFO  [2019-10-06 19:20:36,569] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
-INFO  [2019-10-06 19:20:36,598] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.revolut.backend.core.Account, com.revolut.backend.core.MoneyTransfer]
-INFO  [2019-10-06 19:20:36,683] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  [2019-10-06 19:20:37,251] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-INFO  [2019-10-06 19:20:37,790] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@248d2cec
-INFO  [2019-10-06 19:20:37,791] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@5d77be8e
-INFO  [2019-10-06 19:20:37,791] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@55a055cc
-INFO  [2019-10-06 19:20:37,791] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@1ab1d93d
-INFO  [2019-10-06 19:20:37,791] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@57167ccb
-INFO  [2019-10-06 19:20:37,792] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@37753b69
-INFO  [2019-10-06 19:20:37,792] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@602c167e
-INFO  [2019-10-06 19:20:37,792] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@74c04377
-INFO  [2019-10-06 19:20:37,793] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@10d49900
-INFO  [2019-10-06 19:20:38,113] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
-INFO  [2019-10-06 19:35:39,346] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
-INFO  [2019-10-06 19:35:39,351] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
-INFO  [2019-10-06 19:35:39,595] org.hibernate.Version: HHH000412: Hibernate Core {5.2.15.Final}
-INFO  [2019-10-06 19:35:39,597] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
-INFO  [2019-10-06 19:35:39,611] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.revolut.backend.core.Account, com.revolut.backend.core.MoneyTransfer]
-INFO  [2019-10-06 19:35:39,676] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-INFO  [2019-10-06 19:35:40,210] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-INFO  [2019-10-06 19:35:40,911] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@335b3d6
-INFO  [2019-10-06 19:35:40,912] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@3a5ce4b8
-INFO  [2019-10-06 19:35:40,912] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@38848217
-INFO  [2019-10-06 19:35:40,912] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@1607d391
-INFO  [2019-10-06 19:35:40,912] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@38826984
-INFO  [2019-10-06 19:35:40,913] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@65262308
-INFO  [2019-10-06 19:35:40,913] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@792e8181
-INFO  [2019-10-06 19:35:40,913] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@511d5e6e
-INFO  [2019-10-06 19:35:40,913] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@7a78d380
-INFO  [2019-10-06 19:35:42,022] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
-INFO  [2019-10-06 19:35:42,314] io.dropwizard.server.ServerFactory: Starting revolut-backend-test
-INFO  [2019-10-06 19:35:42,537] org.eclipse.jetty.setuid.SetUIDListener: Opened application@44392e64{HTTP/1.1,[http/1.1]}{0.0.0.0:51901}
-INFO  [2019-10-06 19:35:42,538] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@e18d2a2{HTTP/1.1,[http/1.1]}{0.0.0.0:51902}
-INFO  [2019-10-06 19:35:42,545] org.eclipse.jetty.server.Server: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 11.0.3+12-b304.10
-INFO  [2019-10-06 19:35:43,440] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+INFO  [2019-10-06 20:15:03,104] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    91900 nanoseconds spent acquiring 2 JDBC connections;
+    53700 nanoseconds spent releasing 2 JDBC connections;
+    65500 nanoseconds spent preparing 1 JDBC statements;
+    233300 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    127300 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2019-10-06 20:15:03,115] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    122600 nanoseconds spent acquiring 2 JDBC connections;
+    96900 nanoseconds spent releasing 2 JDBC connections;
+    71700 nanoseconds spent preparing 1 JDBC statements;
+    267600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    177500 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2019-10-06 20:15:03,123] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    89000 nanoseconds spent acquiring 2 JDBC connections;
+    61500 nanoseconds spent releasing 2 JDBC connections;
+    162000 nanoseconds spent preparing 2 JDBC statements;
+    416400 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    760900 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2019-10-06 20:15:03,143] org.eclipse.jetty.server.AbstractConnector: Stopped application@1a8e44fe{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2019-10-06 20:15:03,147] org.eclipse.jetty.server.AbstractConnector: Stopped admin@287317df{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2019-10-06 20:15:03,149] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@10bcbbce{/,null,UNAVAILABLE}
+INFO  [2019-10-06 20:15:03,153] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@25dc2c0{/,null,UNAVAILABLE}
+INFO  [2019-10-06 20:15:14,055] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2019-10-06 20:15:14,063] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2019-10-06 20:15:14,621] org.hibernate.Version: HHH000412: Hibernate Core {5.2.15.Final}
+INFO  [2019-10-06 20:15:14,624] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2019-10-06 20:15:14,654] io.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.revolut.backend.core.Account, com.revolut.backend.core.MoneyTransfer]
+INFO  [2019-10-06 20:15:14,780] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+INFO  [2019-10-06 20:15:15,689] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2019-10-06 20:15:16,341] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.util.Currency] overrides previous : org.hibernate.type.CurrencyType@23bd2f6e
+INFO  [2019-10-06 20:15:16,342] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Duration] overrides previous : org.hibernate.type.DurationType@18e8eb59
+INFO  [2019-10-06 20:15:16,342] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.Instant] overrides previous : org.hibernate.type.InstantType@2430cf17
+INFO  [2019-10-06 20:15:16,342] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDate] overrides previous : org.hibernate.type.LocalDateType@1e95f584
+INFO  [2019-10-06 20:15:16,342] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalDateTime] overrides previous : org.hibernate.type.LocalDateTimeType@54997f67
+INFO  [2019-10-06 20:15:16,343] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.LocalTime] overrides previous : org.hibernate.type.LocalTimeType@bf4e48e
+INFO  [2019-10-06 20:15:16,343] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetDateTime] overrides previous : org.hibernate.type.OffsetDateTimeType@299eca90
+INFO  [2019-10-06 20:15:16,345] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.OffsetTime] overrides previous : org.hibernate.type.OffsetTimeType@189633f2
+INFO  [2019-10-06 20:15:16,346] org.hibernate.type.BasicTypeRegistry: HHH000270: Type registration [java.time.ZonedDateTime] overrides previous : org.hibernate.type.ZonedDateTimeType@76b05c0
+INFO  [2019-10-06 20:15:16,759] org.hibernate.hql.internal.QueryTranslatorFactoryInitiator: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2019-10-06 20:15:17,230] io.dropwizard.server.ServerFactory: Starting revolut-backend-test
+INFO  [2019-10-06 20:15:17,416] org.eclipse.jetty.setuid.SetUIDListener: Opened application@3e2d65e1{HTTP/1.1,[http/1.1]}{0.0.0.0:52649}
+INFO  [2019-10-06 20:15:17,416] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@1174676f{HTTP/1.1,[http/1.1]}{0.0.0.0:52650}
+INFO  [2019-10-06 20:15:17,424] org.eclipse.jetty.server.Server: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 11.0.3+12-b304.10
+INFO  [2019-10-06 20:15:20,165] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
 
     GET     /account (com.revolut.backend.resources.AccountResource)
     POST    /account (com.revolut.backend.resources.AccountResource)
@@ -2264,7 +2266,7 @@ INFO  [2019-10-06 19:35:43,440] io.dropwizard.jersey.DropwizardResourceConfig: T
     DELETE  /transaction/{transactionId} (com.revolut.backend.resources.TransactionResource)
     GET     /transaction/{transactionId} (com.revolut.backend.resources.TransactionResource)
 
-WARN  [2019-10-06 19:35:43,443] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: HK2 service reification failed for [org.glassfish.jersey.message.internal.DataSourceProvider] with an exception:
+WARN  [2019-10-06 20:15:20,169] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: HK2 service reification failed for [org.glassfish.jersey.message.internal.DataSourceProvider] with an exception:
 MultiException stack 1 of 2
 java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
@@ -2427,13 +2429,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -2730,13 +2732,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -3033,13 +3035,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -3336,13 +3338,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -3639,13 +3641,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -3942,13 +3944,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -4245,13 +4247,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -4548,13 +4550,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@7253c53
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@c157abf
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=51
 	locatorId=0
-	identityHashCode=1725359371
+	identityHashCode=1194179317
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -4689,38 +4691,50 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
 
 
-INFO  [2019-10-06 19:35:43,478] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@37f627d0{/,null,AVAILABLE}
-INFO  [2019-10-06 19:35:43,485] io.dropwizard.setup.AdminEnvironment: tasks = 
+INFO  [2019-10-06 20:15:20,171] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@4e3d36c2{/,null,AVAILABLE}
+INFO  [2019-10-06 20:15:20,177] io.dropwizard.setup.AdminEnvironment: tasks = 
 
     POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
     POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
 
-INFO  [2019-10-06 19:35:43,496] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@655f92a1{/,null,AVAILABLE}
-INFO  [2019-10-06 19:35:43,521] org.eclipse.jetty.server.AbstractConnector: Started application@44392e64{HTTP/1.1,[http/1.1]}{0.0.0.0:51901}
-INFO  [2019-10-06 19:35:43,526] org.eclipse.jetty.server.AbstractConnector: Started admin@e18d2a2{HTTP/1.1,[http/1.1]}{0.0.0.0:51902}
-INFO  [2019-10-06 19:35:43,527] org.eclipse.jetty.server.Server: Started @8673ms
-INFO  [2019-10-06 19:35:44,824] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 19:35:44,860] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
-INFO  [2019-10-06 19:35:44,894] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 19:35:44,901] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 19:35:44,904] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
-INFO  [2019-10-06 19:35:44,909] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
-INFO  [2019-10-06 19:35:44,927] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
-INFO  [2019-10-06 19:35:46,918] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 19:35:46,921] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-INFO  [2019-10-06 19:35:46,923] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 19:35:46,925] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 19:35:46,926] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-INFO  [2019-10-06 19:35:46,927] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-INFO  [2019-10-06 19:35:46,976] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.account (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, balance DECIMAL, CONSTRAINT PK_ACCOUNT PRIMARY KEY (id))
-INFO  [2019-10-06 19:35:46,992] liquibase.changelog.ChangeSet: Table account created
-INFO  [2019-10-06 19:35:46,993] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.moneytransfer (id BIGINT AUTO_INCREMENT NOT NULL, accountfrom BIGINT NOT NULL, accountto BIGINT NOT NULL, value DECIMAL, CONSTRAINT PK_MONEYTRANSFER PRIMARY KEY (id))
-INFO  [2019-10-06 19:35:46,996] liquibase.changelog.ChangeSet: Table moneytransfer created
-INFO  [2019-10-06 19:35:46,996] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::davidj ran successfully in 21ms
-INFO  [2019-10-06 19:35:46,998] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
-INFO  [2019-10-06 19:35:47,012] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'davidj', 'migrations.xml', NOW(), 1, '8:ce264b3a01f7ec7967a49eea321fcad5', 'createTable tableName=account; createTable tableName=moneytransfer', '', 'EXECUTED', NULL, NULL, '3.6.1', '0390546928')
-INFO  [2019-10-06 19:35:47,019] liquibase.lockservice.StandardLockService: Successfully released change log lock
-WARN  [2019-10-06 19:35:47,917] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: HK2 service reification failed for [org.glassfish.jersey.message.internal.DataSourceProvider] with an exception:
+INFO  [2019-10-06 20:15:20,194] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@38c1b1a7{/,null,AVAILABLE}
+INFO  [2019-10-06 20:15:20,237] org.eclipse.jetty.server.AbstractConnector: Started application@3e2d65e1{HTTP/1.1,[http/1.1]}{0.0.0.0:52649}
+INFO  [2019-10-06 20:15:20,246] org.eclipse.jetty.server.AbstractConnector: Started admin@1174676f{HTTP/1.1,[http/1.1]}{0.0.0.0:52650}
+INFO  [2019-10-06 20:15:20,247] org.eclipse.jetty.server.Server: Started @11590ms
+INFO  [2019-10-06 20:15:22,370] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:15:22,393] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+INFO  [2019-10-06 20:15:22,401] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:15:22,405] liquibase.executor.jvm.JdbcExecutor: DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:15:22,406] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+INFO  [2019-10-06 20:15:22,410] liquibase.executor.jvm.JdbcExecutor: SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+INFO  [2019-10-06 20:15:22,419] liquibase.lockservice.StandardLockService: Successfully acquired change log lock
+INFO  [2019-10-06 20:15:24,423] liquibase.changelog.StandardChangeLogHistoryService: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:24,428] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+INFO  [2019-10-06 20:15:24,431] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:24,432] liquibase.changelog.StandardChangeLogHistoryService: Reading from PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:24,432] liquibase.executor.jvm.JdbcExecutor: SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+INFO  [2019-10-06 20:15:24,434] liquibase.executor.jvm.JdbcExecutor: SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+INFO  [2019-10-06 20:15:24,484] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.account (id BIGINT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, balance DECIMAL, CONSTRAINT PK_ACCOUNT PRIMARY KEY (id))
+INFO  [2019-10-06 20:15:24,500] liquibase.changelog.ChangeSet: Table account created
+INFO  [2019-10-06 20:15:24,502] liquibase.executor.jvm.JdbcExecutor: CREATE TABLE PUBLIC.moneytransfer (id BIGINT AUTO_INCREMENT NOT NULL, accountfrom BIGINT NOT NULL, accountto BIGINT NOT NULL, value DECIMAL, CONSTRAINT PK_MONEYTRANSFER PRIMARY KEY (id))
+INFO  [2019-10-06 20:15:24,505] liquibase.changelog.ChangeSet: Table moneytransfer created
+INFO  [2019-10-06 20:15:24,505] liquibase.changelog.ChangeSet: ChangeSet migrations.xml::1::davidj ran successfully in 23ms
+INFO  [2019-10-06 20:15:24,506] liquibase.executor.jvm.JdbcExecutor: SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+INFO  [2019-10-06 20:15:24,524] liquibase.executor.jvm.JdbcExecutor: INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'davidj', 'migrations.xml', NOW(), 1, '8:ce264b3a01f7ec7967a49eea321fcad5', 'createTable tableName=account; createTable tableName=moneytransfer', '', 'EXECUTED', NULL, NULL, '3.6.1', '0392924434')
+INFO  [2019-10-06 20:15:24,539] liquibase.lockservice.StandardLockService: Successfully released change log lock
+INFO  [2019-10-06 20:15:25,749] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    405700 nanoseconds spent acquiring 2 JDBC connections;
+    123300 nanoseconds spent releasing 2 JDBC connections;
+    26026400 nanoseconds spent preparing 1 JDBC statements;
+    2556100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    6099800 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+WARN  [2019-10-06 20:15:25,751] org.glassfish.jersey.internal.Errors: The following warnings have been detected: WARNING: HK2 service reification failed for [org.glassfish.jersey.message.internal.DataSourceProvider] with an exception:
 MultiException stack 1 of 2
 java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
@@ -4784,7 +4798,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -4863,13 +4877,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -4918,7 +4932,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5047,7 +5061,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5126,13 +5140,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -5181,7 +5195,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5310,7 +5324,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5389,13 +5403,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -5444,7 +5458,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5573,7 +5587,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5652,13 +5666,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -5707,7 +5721,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5836,7 +5850,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -5915,13 +5929,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -5970,7 +5984,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6099,7 +6113,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6178,13 +6192,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -6233,7 +6247,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6362,7 +6376,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6441,13 +6455,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -6496,7 +6510,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6625,7 +6639,7 @@ java.lang.NoClassDefFoundError: javax/activation/DataSource
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6704,13 +6718,13 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	descriptorVisibility=NORMAL
 	metadata=
 	rank=0
-	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@254dfd34
+	loader=org.glassfish.hk2.utilities.binding.AbstractBinder$2@3aee72d8
 	proxiable=null
 	proxyForSameScope=null
 	analysisName=null
 	id=12
 	locatorId=2
-	identityHashCode=120537650
+	identityHashCode=953272274
 	reified=false)
 	at org.jvnet.hk2.internal.SystemDescriptor.reify(SystemDescriptor.java:705)
 	at org.jvnet.hk2.internal.ServiceLocatorImpl.reifyDescriptor(ServiceLocatorImpl.java:461)
@@ -6759,7 +6773,7 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:437)
 	at org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:343)
 	at com.revolut.backend.BaseResourceTest.postAccount(BaseResourceTest.java:47)
-	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:16)
+	at com.revolut.backend.TransactionResourceTest.testMoneyTransferSuccess(TransactionResourceTest.java:17)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -6825,67 +6839,91 @@ java.lang.IllegalArgumentException: Errors were discovered while reifying System
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
 
 
-INFO  [2019-10-06 19:35:47,920] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    99800 nanoseconds spent acquiring 2 JDBC connections;
-    68700 nanoseconds spent releasing 2 JDBC connections;
-    11588700 nanoseconds spent preparing 1 JDBC statements;
-    1441300 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:25,873] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    5446100 nanoseconds spent acquiring 2 JDBC connections;
+    77800 nanoseconds spent releasing 2 JDBC connections;
+    113900 nanoseconds spent preparing 1 JDBC statements;
+    522200 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    12686800 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    160200 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 19:35:47,949] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    74100 nanoseconds spent acquiring 2 JDBC connections;
-    39400 nanoseconds spent releasing 2 JDBC connections;
-    73200 nanoseconds spent preparing 1 JDBC statements;
-    242600 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:25,993] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    11864000 nanoseconds spent acquiring 2 JDBC connections;
+    76200 nanoseconds spent releasing 2 JDBC connections;
+    1599000 nanoseconds spent preparing 5 JDBC statements;
+    3361700 nanoseconds spent executing 5 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    98100 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    15318200 nanoseconds spent executing 1 flushes (flushing a total of 3 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 19:35:47,994] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    83900 nanoseconds spent acquiring 2 JDBC connections;
-    47800 nanoseconds spent releasing 2 JDBC connections;
-    918700 nanoseconds spent preparing 5 JDBC statements;
-    2280100 nanoseconds spent executing 5 JDBC statements;
+INFO  [2019-10-06 20:15:26,061] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    140500 nanoseconds spent acquiring 2 JDBC connections;
+    103300 nanoseconds spent releasing 2 JDBC connections;
+    98000 nanoseconds spent preparing 1 JDBC statements;
+    529100 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    8265700 nanoseconds spent executing 1 flushes (flushing a total of 3 entities and 0 collections);
+    197000 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 19:35:48,009] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    82500 nanoseconds spent acquiring 2 JDBC connections;
-    62200 nanoseconds spent releasing 2 JDBC connections;
-    64000 nanoseconds spent preparing 1 JDBC statements;
-    161300 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:26,250] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    806700 nanoseconds spent acquiring 2 JDBC connections;
+    133600 nanoseconds spent releasing 2 JDBC connections;
+    119000 nanoseconds spent preparing 1 JDBC statements;
+    257800 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    133200 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    164300 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 19:35:48,081] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
-    467400 nanoseconds spent acquiring 2 JDBC connections;
-    84300 nanoseconds spent releasing 2 JDBC connections;
-    65700 nanoseconds spent preparing 1 JDBC statements;
-    181900 nanoseconds spent executing 1 JDBC statements;
+INFO  [2019-10-06 20:15:26,284] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    101700 nanoseconds spent acquiring 2 JDBC connections;
+    71900 nanoseconds spent releasing 2 JDBC connections;
+    100300 nanoseconds spent preparing 1 JDBC statements;
+    1102300 nanoseconds spent executing 1 JDBC statements;
     0 nanoseconds spent executing 0 JDBC batches;
     0 nanoseconds spent performing 0 L2C puts;
     0 nanoseconds spent performing 0 L2C hits;
     0 nanoseconds spent performing 0 L2C misses;
-    125300 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    171800 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 }
-INFO  [2019-10-06 19:35:48,093] org.eclipse.jetty.server.AbstractConnector: Stopped application@44392e64{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
-INFO  [2019-10-06 19:35:48,095] org.eclipse.jetty.server.AbstractConnector: Stopped admin@e18d2a2{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
-INFO  [2019-10-06 19:35:48,097] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@655f92a1{/,null,UNAVAILABLE}
-INFO  [2019-10-06 19:35:48,101] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@37f627d0{/,null,UNAVAILABLE}
+INFO  [2019-10-06 20:15:26,297] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    115900 nanoseconds spent acquiring 2 JDBC connections;
+    70300 nanoseconds spent releasing 2 JDBC connections;
+    93400 nanoseconds spent preparing 1 JDBC statements;
+    380100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    167000 nanoseconds spent executing 1 flushes (flushing a total of 1 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2019-10-06 20:15:26,311] org.hibernate.engine.internal.StatisticalLoggingSessionEventListener: Session Metrics {
+    108600 nanoseconds spent acquiring 2 JDBC connections;
+    77400 nanoseconds spent releasing 2 JDBC connections;
+    151700 nanoseconds spent preparing 2 JDBC statements;
+    409000 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+INFO  [2019-10-06 20:15:26,332] org.eclipse.jetty.server.AbstractConnector: Stopped application@3e2d65e1{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2019-10-06 20:15:26,335] org.eclipse.jetty.server.AbstractConnector: Stopped admin@1174676f{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+INFO  [2019-10-06 20:15:26,337] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@38c1b1a7{/,null,UNAVAILABLE}
+INFO  [2019-10-06 20:15:26,343] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@4e3d36c2{/,null,UNAVAILABLE}
