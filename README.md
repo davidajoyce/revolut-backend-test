@@ -69,7 +69,15 @@ a pre-installed container/server).
 - 403 Not Found (reason: Value transferred must be greater than 0)
 - 404 Not Found (reason: The following account does not have enough money)
 - 500 Internal Server Error 
-
+### Sample JSON for Account and Transaction
+#### Account Creation:
+##### Body: 
+```sh
+{  
+   "name":"Mr.Test",
+   "balance":1000
+} 
+```
 #### Transaction:
 ##### Body:
 ```sh
