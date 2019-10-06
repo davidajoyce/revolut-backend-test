@@ -29,9 +29,14 @@ a pre-installed container/server).
    - Jersey (Rest API)
    - Hibernate 
    - H2 database (Run in Memory Database)
+   - Maven 3 (package to a fat jar)
     
 # Instructions
+###Install
 
+   - Maven 3
+   - Java 11
+   
 ### Build
 
     $ mvn package
