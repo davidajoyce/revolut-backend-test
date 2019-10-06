@@ -57,7 +57,7 @@ public class MoneyTransferApplication extends Application<MoneyTransferConfigura
         final AccountDAO accountdao = new AccountDAO(hibernateBundle.getSessionFactory());
         final MoneyTransferDAO moneyTransferdao = new MoneyTransferDAO(hibernateBundle.getSessionFactory());
         environment.jersey().register(new AccountResource(accountdao));
-        environment.jersey().register(new TransactionResource(moneyTransferdao));
+        environment.jersey().register(new TransactionResource(moneyTransferdao, accountdao));
     }
 }
 

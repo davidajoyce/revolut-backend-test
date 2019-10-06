@@ -5,6 +5,8 @@ import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
+import javax.ws.rs.NotFoundException;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,4 +31,15 @@ public class AccountDAO extends AbstractDAO<Account> {
     public void removeAccount(Account account) {
         currentSession().delete(account);
     }
+
+    public void updateBalance(long accountId, BigDecimal newBalance) {
+        Account account = findSafely(accountId);
+        account.setBalance(newBalance);
+        currentSession().update(account);
+   }
+
+    public Account findSafely(long accountId) {
+        return findById(accountId).orElseThrow(() -> new NotFoundException("No such account."));
+    }
+
 }
